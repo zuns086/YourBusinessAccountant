@@ -1,0 +1,598 @@
+/* ==============================
+   Zynex Accounting (Pvt) Ltd
+   Custom Corporate Style
+   ============================== */
+
+/* Use modern Poppins font (make sure it's linked in HTML) */
+body, h1, h2, h3, p, a {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- Header Section ---------- */
+header.white-text-container {
+  text-align: center;
+  color: #ffffff;
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+
+/* Company Name */
+header.white-text-container h1 {
+  font-weight: 700;            /* Bold for strong impact */
+  font-size: 48px;             /* Modern large font */
+  letter-spacing: 1px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+/* Company Slogan */
+header.white-text-container p {
+  font-weight: 400;
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+/* Elegant horizontal line under slogan */
+header.white-text-container p::after {
+  content: "";
+  display: block;
+  width: 80%;
+  max-width: 600px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 20px auto 25px;
+  border-radius: 2px;
+}
+
+/* ---------- Link Section ---------- */
+.text-links {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.text-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.text-links a i {
+  margin-right: 6px;
+  color: #00bcd4; /* Icon color (blue accent) */
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+/* Hover effects for links */
+.text-links a:hover {
+  color: #4dd0e1;
+  transform: translateY(-2px);
+}
+
+.text-links a:hover i {
+  color: #80deea;
+}
+
+/* ---------- Cards / Content Blocks ---------- */
+.card {
+  background: #ffffff;
+  color: #333;
+  border-radius: 10px;
+  margin: 30px auto;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.card-block {
+  padding: 30px;
+}
+
+.card-block h2 {
+  font-weight: 600;
+  color: #004c70;
+  margin-bottom: 20px;
+}
+
+.card-block p {
+  line-height: 1.6;
+  color: #444;
+  font-size: 15px;
+}
+
+/* ---------- Footer ---------- */
+.footer-container {
+  background-color: #003d5c;
+  color: #ffffff;
+  padding: 25px 0;
+  font-size: 14px;
+}
+
+.footer-container img {
+  width: 40px;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+/* ---------- Responsive Design ---------- */
+@media (max-width: 768px) {
+  header.white-text-container h1 {
+    font-size: 36px;
+  }
+
+  .text-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  header.white-text-container p::after {
+    width: 70%;
+  }
+
+  .card-block {
+    padding: 20px;
+  }
+}
+
+/* ---------- Clients / Experience Section ---------- */
+.client-list {
+  margin-top: 20px;
+}
+
+.client {
+  background: #f9f9f9;
+  border: 1px solid #e1e1e1;
+  border-radius: 12px;
+  padding: 20px 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.client:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.client h4 {
+  font-size: 18px;
+  color: #004c70;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.two-column-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 6px 20px;
+  padding-left: 20px;
+  margin: 0;
+  list-style-type: disc;
+}
+
+.two-column-list li {
+  font-size: 15px;
+  color: #555;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .two-column-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Contact Page Styles ---------- */
+.contact-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  margin-top: 40px;
+  padding: 40px 20px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.contact-item {
+  text-align: center;
+  max-width: 500px;
+}
+
+.contact-item i {
+  font-size: 30px;
+  color: #0077b6;
+  margin-bottom: 10px;
+}
+
+.contact-item p {
+  font-size: 17px;
+  color: #333;
+  margin: 5px 0;
+}
+
+.contact-item a {
+  text-decoration: none;
+  color: #004c70;
+  font-weight: 600;
+}
+
+.contact-note {
+  font-size: 13px;
+  color: #777;
+}
+
+.back-link {
+  margin-top: 30px;
+}
+
+.back-link a {
+  font-size: 15px;
+  color: #0077b6;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .contact-card {
+    padding: 25px 15px;
+  }
+}
+
+/* ===============================
+   Global Style for Bookkeeping Page
+   =============================== */
+/* ===============================
+   Bookkeeping Page Styling
+   =============================== */
+
+.bookkeeping-section {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 40px 30px;
+  margin: 40px auto;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  color: #333;
+}
+
+.bookkeeping-section h2 {
+  font-weight: 600;
+  color: #004c70;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.bookkeeping-section p {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #444;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* ✅ Custom List for Bookkeeping Page */
+.custom-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 18px;
+}
+
+.custom-list li {
+  padding: 10px 0;
+  font-size: 15.5px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.custom-list li::before {
+  content: "\f00c"; /* check mark icon */
+  font-family: "FontAwesome";
+  color: #2a7ae4;
+  margin-right: 10px;
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+.custom-list li:hover {
+  color: #1e88e5;
+}
+
+/* Back to Home Button */
+.back-home {
+  margin: 40px 0 20px;
+  text-align: center;
+}
+
+.back-home a {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #2a7ae4;
+  border: 2px solid #2a7ae4;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.back-home a i {
+  margin-right: 8px;
+}
+
+.back-home a:hover {
+  background-color: #2a7ae4;
+  color: #fff;
+}
+
+
+/* ERP Page Enhancements */
+
+/* ===== ERP PAGE STYLES ===== */
+
+.white-box {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px 25px;
+  margin: 40px auto;
+  max-width: 900px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.white-box h2 {
+  color: #004c70;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.white-box p {
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.erp-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.erp-list li {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #444;
+  position: relative;
+  padding-left: 25px;
+}
+
+.erp-list li::before {
+  content: "\f0a4";
+  font-family: FontAwesome;
+  position: absolute;
+  left: 0;
+  color: #2a7ae4;
+}
+
+.back-home {
+  display: inline-block;
+  margin-top: 15px;
+  color: #2a7ae4;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.back-home:hover {
+  text-decoration: underline;
+}
+
+/* ===== ERP SLIDER ===== */
+/* ===========================
+   ERP Solution Page Styles
+   =========================== */
+
+.erp-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.erp-list li {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #444;
+  position: relative;
+  padding-left: 25px;
+  line-height: 1.6;
+}
+
+.erp-list li::before {
+  content: "\f0a4";
+  font-family: FontAwesome;
+  position: absolute;
+  left: 0;
+  color: #2a7ae4;
+  font-size: 14px;
+}
+
+/* ===== ERP SLIDER ===== */
+.slider-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 50px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+  will-change: transform;
+}
+
+.slide {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .slide img {
+    height: 300px;
+  }
+}
+/* ===============================
+   Consistent Navigation Styles
+   =============================== */
+
+/* Navigation Container */
+.nav-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 20px 0 30px;
+  flex-wrap: wrap;
+  padding: 0 15px;
+}
+
+/* Navigation Links */
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-link i {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.nav-link.active {
+  background: rgba(0, 188, 212, 0.3);
+  border-color: #00bcd4;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .nav-link {
+    width: 200px;
+    justify-content: center;
+  }
+}
+/* ===============================
+   Contact Form Card (for Index Page)
+   =============================== */
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-form .form-group {
+  margin-bottom: 18px;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 500;
+  color: #004c70;
+  margin-bottom: 6px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #2a7ae4;
+  box-shadow: 0 0 5px rgba(42, 122, 228, 0.3);
+}
+
+.contact-form button {
+  background-color: #2a7ae4;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #004c70;
+}
+
+/* For responsive spacing inside card */
+@media (max-width: 768px) {
+  .contact-form {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
