@@ -17,108 +17,23 @@
   <script src="jquery-3.6.0.min.js"></script>
   
   <style>
-    /* Additional refinements for professional look */
-    .header-profile-img {
-      max-width: 140px;
+    /* Only extra styling to make the About Me image look professional - no other changes to format */
+    .about-ceo-img {
+      max-width: 160px;
       border-radius: 50%;
-      border: 4px solid rgba(255,255,255,0.8);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      border: 4px solid #ffb347;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
       margin-bottom: 1rem;
       transition: transform 0.2s ease;
     }
-    .header-profile-img:hover {
+    .about-ceo-img:hover {
       transform: scale(1.02);
     }
-    .white-text-container .nav-container {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    .white-text-container .nav-link {
-      background: rgba(255,255,255,0.15);
-      padding: 8px 22px;
-      border-radius: 40px;
-      color: white;
-      font-weight: 500;
-      text-decoration: none;
-      transition: 0.2s;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .white-text-container .nav-link:hover {
-      background: #ffb347;
-      color: #1e2a3e;
-      transform: translateY(-2px);
-    }
-    
-    /* Professional About Me section with image + text side by side */
-    .about-professional {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-      text-align: left;
-    }
-    .about-image {
-      flex-shrink: 0;
-      text-align: center;
-    }
-    .about-image img {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 5px solid #ffb347;
-      box-shadow: 0 12px 24px rgba(0,0,0,0.12);
-    }
-    .about-content {
-      flex: 1;
-    }
-    .about-content h2 {
-      margin-top: 0;
-      margin-bottom: 0.75rem;
-      font-size: 1.8rem;
-      color: #123e52;
-    }
-    .about-content p {
-      margin-bottom: 0.5rem;
-      line-height: 1.6;
-    }
-    .specialties-badge {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-top: 1rem;
-    }
-    .specialties-badge span {
-      background: #f0f4f8;
-      padding: 5px 14px;
-      border-radius: 30px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: #1e4660;
-    }
-    @media (max-width: 768px) {
-      .about-professional {
-        flex-direction: column;
-        text-align: center;
-      }
-      .about-content {
-        text-align: center;
-      }
-      .specialties-badge {
-        justify-content: center;
-      }
-    }
+    /* keep all original card and text styles intact */
     .team-photo {
-      border: 4px solid #fff;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-    .card-block {
-      padding: 1.8rem;
+      max-width: 200px;
+      border-radius: 50%;
+      margin-top: 15px;
     }
   </style>
 </head>
@@ -129,11 +44,10 @@
   <main class="content-wrapper">
     <!-- ================= HEADER ================= -->
     <header class="white-text-container section-container text-center">
-      <img src="./assets/images/team/ceo.jpg" alt="Zahid Mehmood - CEO" class="header-profile-img" onerror="this.onerror=null; this.src='https://placehold.co/300x300/2c3e50/white?text=ZM'">
       <h1>Zahid Mehmood</h1>
       <p>Professional Accountant & ERP Consultant serving businesses worldwide.</p>
 
-      <!-- Navigation -->
+      <!-- ====== Professional Navigation ====== -->
       <nav class="nav-container">
         <a href="assets/Pages/erp.html" class="nav-link"><i class="fa fa-cogs"></i> ERP Solutions</a>
         <a href="assets/Pages/Bookkeeping.html" class="nav-link"><i class="fa fa-balance-scale"></i> Bookkeeping</a>
@@ -142,28 +56,15 @@
       </nav>
     </header>
 
-    <!-- ================= ABOUT ME - PROFESSIONALLY REDESIGNED with CEO IMAGE ================= -->
+    <!-- ================= ABOUT ================= -->
     <div class="container">
       <div class="card">
-        <div class="card-block">
-          <div class="about-professional">
-            <div class="about-image">
-              <!-- CEO image integrated professionally -->
-              <img src="./assets/images/team/ceo.jpg" alt="Zahid Mehmood" onerror="this.onerror=null; this.src='https://placehold.co/400x400/123e52/white?text=ZM'">
-            </div>
-            <div class="about-content">
-              <h2>About Me</h2>
-              <p><strong>Zahid Mehmood</strong> — Professional Accountant & ERP Consultant serving businesses worldwide with complete financial and system solutions.</p>
-              <p>With years of hands-on experience in accounting automation, ERP deployment, and corporate compliance, I help organizations streamline financial operations and achieve sustainable growth through technology-driven strategies.</p>
-              <div class="specialties-badge">
-                <span>Accounting Automation</span>
-                <span>ERP Implementation</span>
-                <span>Corporate Filings</span>
-                <span>Taxation</span>
-                <span>Financial Advisory</span>
-              </div>
-            </div>
-          </div>
+        <div class="card-block text-center">
+          <!-- Professional CEO image inserted right here in About section as requested -->
+          <img src="./assets/images/team/ceo.jpg" alt="Zahid Mehmood - CEO" class="about-ceo-img" onerror="this.onerror=null; this.src='https://placehold.co/300x300/2c3e50/white?text=ZM'">
+          <h2>About Me</h2>
+          <p><b>Zahid Mehmood</b> — Professional Accountant & ERP Consultant serving businesses worldwide with complete financial and system solutions.</p>
+          <p>Specialties: Accounting Automation | ERP Implementation | Corporate Filings | Taxation | Financial Advisory</p>
         </div>
       </div>
 
@@ -171,10 +72,10 @@
       <div class="card">
         <div class="card-block text-center">
           <h2>My Professional Statement</h2>
-          <img src="./assets/images/team/ceo.jpg" alt="Zahid Mehmood" class="team-photo" style="max-width:180px; border-radius:50%; margin-top:10px; border:4px solid #ffb347;" onerror="this.src='https://placehold.co/200x200/123e52/white?text=ZM'">
-          <h4 style="margin-top:12px;">Zahid Mehmood</h4>
+          <img src="./assets/images/team/ceo4.jpg" alt="Zahid Mehmood" class="team-photo" style="max-width:200px; border-radius:50%; margin-top:15px;">
+          <h4 style="margin-top:10px;">Zahid Mehmood</h4>
           <p class="team-role">Professional Accountant & ERP Consultant</p>
-          <p style="margin-top:15px; font-size:16px; line-height:1.6; max-width:750px; margin-left:auto; margin-right:auto;">
+          <p style="margin-top:15px; font-size:16px; line-height:1.6;">
             My mission is to empower businesses through technology-driven accounting and ERP solutions. I believe that automation and financial transparency are key to sustainable business growth. I continuously strive to deliver innovation, accuracy, and excellence to every client I serve.
           </p>
           <p style="font-weight:600; margin-top:10px;">
@@ -266,6 +167,7 @@
               <textarea id="message" name="message" rows="4" required></textarea>
             </div>
 
+            <!-- Hidden fields -->
             <input type="hidden" name="_subject" value="New Website Inquiry from Zahid Mehmood">
             <input type="hidden" name="_next" value="assets/Pages/thankyou.html">
 
@@ -282,15 +184,13 @@
   <footer class="footer-container white-text-container text-center">
     <div class="container">
       <p><img src="./assets/images/mashup-icon.svg" alt=""></p>
-      <p>© 2025 Zahid Mehmood | Professional Accountant & ERP Consultant</p>
+      <p>© 2019 Zahid Mehmood | Professional Accountant & ERP Consultant</p>
     </div>
   </footer>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      if (typeof scrollRevelation !== 'undefined') {
-        scrollRevelation('.card');
-      }
+      scrollRevelation('.card');
     });
   </script>
   <script type="text/javascript" src="./main.bc58148c.js"></script>
