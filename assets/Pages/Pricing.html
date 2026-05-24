@@ -30,196 +30,224 @@
 
   <script src="../../jquery-3.6.0.min.js"></script>
 
-  <style>
+ <style>
 
-    /* ONLY CUSTOM STYLES */
+/* ================= BASE LAYOUT ================= */
 
-    .pricing-grid {
-      display: flex;
-      gap: 25px;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 30px 0;
-    }
+.pricing-grid {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px 0;
+}
 
-    .pricing-card {
-      background: white;
-      border-radius: 12px;
-      padding: 25px;
-      width: 300px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-      text-align: center;
-    }
+.pricing-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  width: 300px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  text-align: center;
+}
 
-    .pricing-card:hover {
-      transform: translateY(-5px);
-    }
+.pricing-card:hover {
+  transform: translateY(-6px);
+}
 
-    .pricing-card.featured {
-      border: 2px solid #ffb347;
-      background: #fffaf5;
-    }
+.pricing-card.featured {
+  border: 2px solid #ffb347;
+  background: #fffaf5;
+}
 
-    .pricing-card h3 {
-      color: #123e52;
-      font-size: 1.8rem;
-      margin-bottom: 15px;
-      font-weight: 700;
-    }
+/* ================= HEADINGS ================= */
 
-    .pricing-card .price {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: #ff8c2e;
-    }
+.pricing-card h3 {
+  color: #123e52;
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  font-weight: 800;
+}
 
-    .pricing-card .price small {
-      font-size: 1rem;
-    }
+/* ================= PRICE ================= */
 
-    .pricing-card ul {
-      text-align: left;
-      padding-left: 20px;
-      margin: 20px 0;
-      min-height: 200px;
-    }
+.pricing-card .price {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #ff8c2e;
+  margin-bottom: 10px;
+}
 
-    .pricing-card ul li {
-      margin: 10px 0;
-      font-size: 1rem;
-      line-height: 1.5;
-    }
+.pricing-card .price small {
+  font-size: 1.5rem;
+  color: #666;
+}
 
-    .btn-pricing {
-      display: inline-block;
-      background: #ffb347;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 5px;
-      margin-top: 15px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
-      transition: background 0.2s;
-    }
+/* ================= BULLETS (FIXED - MAIN ISSUE) ================= */
 
-    .btn-pricing:hover {
-      background: #ff8c2e;
-      color: white;
-    }
+.pricing-card ul {
+  text-align: left;
+  padding-left: 28px;
+  margin: 20px 0;
+}
 
-    .btn-secondary {
-      display: inline-block;
-      background: #123e52;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 5px;
-      margin-top: 15px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
-      transition: background 0.2s;
-    }
+.pricing-card ul li {
+  margin: 12px 0;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  font-weight: 600;
+  color: #222;
+}
 
-    .btn-secondary:hover {
-      background: #1a5270;
-      color: white;
-    }
+/* ================= BUTTONS ================= */
 
-    .badge {
-      background: #ffb347;
-      color: #123e52;
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      font-weight: bold;
-      display: inline-block;
-      margin-bottom: 12px;
-    }
+.btn-pricing {
+  display: inline-block;
+  background: #ffb347;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  margin-top: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: background 0.2s ease;
+}
 
-    .source-code-section {
-      background: #f0f7ff;
-      padding: 30px;
-      border-radius: 12px;
-      margin: 30px 0;
-      text-align: center;
-    }
+.btn-pricing:hover {
+  background: #ff8c2e;
+  color: white;
+}
 
-    .source-code-section h2 {
-      font-size: 1.8rem;
-      margin-bottom: 15px;
-    }
+.btn-secondary {
+  display: inline-block;
+  background: #123e52;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  margin-top: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.4rem;
+  transition: background 0.2s ease;
+}
 
-    .source-code-section p {
-      font-size: 1.1rem;
-    }
+.btn-secondary:hover {
+  background: #1a5270;
+  color: white;
+}
 
-    .contact-direct {
-      margin-top: 20px;
-      padding: 25px;
-      background: #f5f5f5;
-      border-radius: 8px;
-      text-align: center;
-    }
+/* ================= BADGE ================= */
 
-    .contact-method {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 25px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
+.badge {
+  background: #ffb347;
+  color: #123e52;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 12px;
+}
 
-    .contact-method a {
-      text-decoration: none;
-      color: #123e52;
-      font-weight: bold;
-      font-size: 1rem;
-    }
+/* ================= SECTIONS ================= */
 
-    .contact-method i {
-      margin-right: 8px;
-      color: #ffb347;
-      font-size: 1.2rem;
-    }
+.source-code-section {
+  background: #f0f7ff;
+  padding: 30px;
+  border-radius: 12px;
+  margin: 30px 0;
+  text-align: center;
+}
 
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
+.source-code-section h2 {
+  font-size: 2.3rem;
+  font-weight: 800;
+}
 
-    .col-md-3 {
-      flex: 1;
-      min-width: 200px;
-    }
+.source-code-section p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
 
-    .col-md-3 h3 {
-      font-size: 1.5rem;
-      color: #ff8c2e;
-      margin-bottom: 10px;
-    }
+/* ================= A LA CARTE ================= */
 
-    .col-md-3 p {
-      font-size: 1rem;
-    }
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
 
-    .text-center {
-      text-align: center;
-    }
+.col-md-3 {
+  flex: 1;
+  min-width: 200px;
+}
 
-    .card h2 {
-      font-size: 2rem;
-    }
+.col-md-3 h3 {
+  font-size: 2rem;
+  color: #ff8c2e;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
 
-    .card p {
-      font-size: 1rem;
-    }
+.col-md-3 p {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
 
-  </style>
+/* ================= GLOBAL TYPOGRAPHY FIX ================= */
+
+.card h2 {
+  font-size: 2.3rem;
+  font-weight: 800;
+}
+
+.card p {
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-direct {
+  margin-top: 20px;
+  padding: 25px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.contact-method {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 25px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contact-method a {
+  text-decoration: none;
+  color: #123e52;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.contact-method i {
+  margin-right: 8px;
+  color: #ffb347;
+  font-size: 1.2rem;
+}
+
+/* ================= TEXT HELPERS ================= */
+
+.text-center {
+  text-align: center;
+}
+
+</style>
 
 </head>
 
@@ -370,9 +398,7 @@
 
           </div>
 
-          <p class="text-center" style="margin-top: 20px; font-size: 1.1rem;">
-            <strong>✅ 10 clients at $299/month = $2,990/month – Your $3k goal!</strong>
-          </p>
+     
 
         </div>
 
@@ -484,22 +510,22 @@
           <div class="row">
 
             <div class="col-md-3">
-              <h3>$25</h3>
+              <h3>$99</h3>
               <p>Catch-up Bookkeeping</p>
             </div>
 
             <div class="col-md-3">
-              <h3>$50-150</h3>
-              <p>Tax Filing (US/UAE/PK)</p>
+              <h3>$ 100-150</h3>
+              <p>Tax Filing (UAE/PK)</p>
             </div>
 
             <div class="col-md-3">
-              <h3>$75</h3>
+              <h3>$ 300</h3>
               <p>Financial Statements</p>
             </div>
 
             <div class="col-md-3">
-              <h3>$150</h3>
+              <h3>$ 99</h3>
               <p>ERP Consultation</p>
             </div>
 
@@ -559,15 +585,13 @@
 
           </div>
 
-          <p style="margin-top:20px; font-size: 1rem;">
+          <p style="margin-top:20px; font-size: 1.6rem;">
             ✅ I reply within 24 hours |
             ✅ Flat $299/month |
             ✅ Cancel anytime
           </p>
 
-          <p style="font-size: 1rem;">
-            <strong>10 clients at $299/month = $2,990/month – Help me reach my $3k goal!</strong>
-          </p>
+     
 
         </div>
 
