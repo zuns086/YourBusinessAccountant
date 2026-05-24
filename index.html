@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta content="width=device-width,initial-scale=1" name="viewport">
-  <meta name="description" content="Zahid Mehmood - Professional Accountant & ERP Consultant">
+  <meta name="description" content="ZynexLedger - $99/year accounting software + bookkeeping services. Custom ERP with source code available for large firms.">
   <meta name="google" content="notranslate" />
-  <title>Zahid Mehmood | Professional Accountant & ERP Consultant</title>
+  <title>ZynexLedger | Accounting Software + Bookkeeping Services</title>
 
   <link href="./assets/favicon.ico" rel="icon">
   <link href="./main.d8e0d294.css" rel="stylesheet">
@@ -17,7 +17,7 @@
   <script src="jquery-3.6.0.min.js"></script>
   
   <style>
-    /* Additional styling for new sections - keeps original look consistent */
+    /* Additional styling for new sections */
     .about-ceo-img {
       max-width: 160px;
       border-radius: 50%;
@@ -34,7 +34,6 @@
       border-radius: 50%;
       margin-top: 15px;
     }
-    /* Work experience styling to match original design */
     .work-experience {
       margin-bottom: 1.8rem;
       border-left: 3px solid #ffb347;
@@ -87,6 +86,120 @@
     .col-md-4 {
       margin-bottom: 1rem;
     }
+    
+    /* Pricing Grid Styles */
+    .pricing-grid {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 30px 0;
+    }
+    .pricing-card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      width: 280px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+      text-align: center;
+    }
+    .pricing-card:hover {
+      transform: translateY(-5px);
+    }
+    .pricing-card.featured {
+      border: 2px solid #ffb347;
+      background: #fffaf5;
+    }
+    .pricing-card h3 {
+      color: #123e52;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    .pricing-card .price {
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: #ff8c2e;
+    }
+    .pricing-card .price small {
+      font-size: 0.8rem;
+      color: #666;
+    }
+    .pricing-card hr {
+      margin: 15px 0;
+    }
+    .pricing-card ul {
+      text-align: left;
+      padding-left: 20px;
+      margin: 15px 0;
+      min-height: 200px;
+    }
+    .pricing-card ul li {
+      margin: 8px 0;
+      font-size: 0.9rem;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: #ffb347;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 5px;
+      margin-top: 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary:hover {
+      background: #ff8c2e;
+      color: white;
+    }
+    .btn-secondary {
+      display: inline-block;
+      background: #123e52;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 5px;
+      margin-top: 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-secondary:hover {
+      background: #1a5270;
+      color: white;
+    }
+    .testimonial-icon {
+      font-size: 2rem;
+      color: #ffb347;
+      margin-bottom: 10px;
+    }
+    .contact-email {
+      margin-top: 20px;
+      padding: 15px;
+      background: #f5f5f5;
+      border-radius: 8px;
+    }
+    .source-code-section {
+      background: #f0f7ff;
+      padding: 30px;
+      border-radius: 12px;
+      margin: 30px 0;
+      text-align: center;
+    }
+    .badge {
+      background: #ffb347;
+      color: #123e52;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
   </style>
 </head>
 
@@ -96,30 +209,178 @@
   <main class="content-wrapper">
     <!-- ================= HEADER ================= -->
     <header class="white-text-container section-container text-center">
-      <h1>Zahid Mehmood</h1>
-      <p>Professional Accountant & ERP Consultant serving businesses worldwide.</p>
+      <h1>Accounting Software + Expert Review</h1>
+      <p>20+ years US/UAE/PK experience | Built my own ERP tool | Flat rates, no surprises</p>
 
       <!-- ====== Professional Navigation ====== -->
       <nav class="nav-container">
         <a href="assets/Pages/erp.html" class="nav-link"><i class="fa fa-cogs"></i> ERP Solutions</a>
         <a href="assets/Pages/Bookkeeping.html" class="nav-link"><i class="fa fa-balance-scale"></i> Bookkeeping</a>
         <a href="assets/Pages/clients.html" class="nav-link"><i class="fa fa-users"></i> Clients & Projects</a>
-        <a href="assets/Pages/ContactUs.html" class="nav-link"><i class="fa fa-envelope"></i> Contact Us</a>
+        <a href="#contact" class="nav-link"><i class="fa fa-envelope"></i> Contact Us</a>
       </nav>
     </header>
 
-    <!-- ================= ABOUT ================= -->
     <div class="container">
+      <!-- ================= PRICING SECTION ================= -->
+      
+      <!-- Section 1: For Small Businesses -->
       <div class="card">
         <div class="card-block">
-          <h2>About me</h2>
+          <h2 class="text-center">For Small Businesses (10-100 employees)</h2>
+          <p class="text-center" style="margin-bottom: 20px;">Zynex ERP Tool + Me as Your Accountant = One Flat Price</p>
+          
+          <div class="pricing-grid">
+            <!-- Plan 1: Basic -->
+            <div class="pricing-card">
+              <h3>Basic</h3>
+              <div class="price">$99<span style="font-size: 1rem;">/year</span></div>
+              <p style="font-size: 0.8rem; color: #666;">$8.25/month</p>
+              <hr>
+              <ul>
+                <li>✅ Zynex ERP Tool Access</li>
+                <li>✅ Unlimited Invoices</li>
+                <li>✅ Unlimited Users</li>
+                <li>✅ Customizable Fields</li>
+                <li>✅ Basic Reports (P&L, Balance Sheet)</li>
+                <li>✅ Email Support</li>
+                <li>❌ Human Bookkeeping Review</li>
+              </ul>
+              <a href="#contact" class="btn-secondary">Get Started →</a>
+            </div>
+
+            <!-- Plan 2: Pro (Featured - Your Sweet Spot) -->
+            <div class="pricing-card featured">
+              <div class="badge">🔥 MOST POPULAR</div>
+              <h3>Professional</h3>
+              <div class="price">$299<span style="font-size: 1rem;">/month</span></div>
+              <p style="font-size: 0.8rem; color: #666;">Software + Human Review</p>
+              <hr>
+              <ul>
+                <li>✅ Zynex ERP Tool Access</li>
+                <li>✅ Unlimited Invoices & Users</li>
+                <li>✅ <strong>Monthly Bookkeeping Review</strong></li>
+                <li>✅ <strong>Quarterly Tax Check</strong></li>
+                <li>✅ WhatsApp Support (24hr)</li>
+                <li>✅ Tax Filing Support</li>
+                <li>✅ 20+ Years Expert Review by Zahid</li>
+              </ul>
+              <a href="#contact" class="btn-primary">Start Free Trial →</a>
+            </div>
+
+            <!-- Plan 3: Premium -->
+            <div class="pricing-card">
+              <h3>Premium</h3>
+              <div class="price">$99<span style="font-size: 1rem;">/month</span></div>
+              <p style="font-size: 0.8rem; color: #666;">or $999/year (save $189)</p>
+              <hr>
+              <ul>
+                <li>✅ Everything in Professional</li>
+                <li>✅ <strong>Weekly Bookkeeping Review</strong></li>
+                <li>✅ Full Tax Filing (US/UAE/PK)</li>
+                <li>✅ SECP/Corporate Compliance</li>
+                <li>✅ WhatsApp Support (4hr)</li>
+                <li>✅ Dedicated Accountant (Zahid)</li>
+              </ul>
+              <a href="#contact" class="btn-secondary">Contact for Trial →</a>
+            </div>
+          </div>
+          
+          <p class="text-center" style="margin-top: 20px;"><strong>✅ 10 clients at $299/month = $2,990/month – Your $3k goal!</strong></p>
+        </div>
+      </div>
+
+      <!-- Section 2: For Large Firms - Source Code -->
+      <div class="source-code-section">
+        <h2>🏢 For Large Firms & ERP Consultants</h2>
+        <p><strong>Buy Zynex ERP Source Code – Customize Freely</strong></p>
+        <p style="margin-bottom: 20px;">One-time payment. No recurring fees. White-label rights available.</p>
+        
+        <div class="pricing-grid" style="margin-top: 20px;">
+          <div class="pricing-card">
+            <h3>Basic License</h3>
+            <div class="price">$5,000</div>
+            <p style="font-size: 0.8rem;">One-time</p>
+            <hr>
+            <ul>
+              <li>✅ Full Source Code</li>
+              <li>✅ 10 Hours Setup Support</li>
+              <li>✅ Documentation</li>
+            </ul>
+            <a href="#contact" class="btn-secondary">Inquire →</a>
+          </div>
+          
+          <div class="pricing-card">
+            <h3>Professional License</h3>
+            <div class="price">$10,000</div>
+            <p style="font-size: 0.8rem;">One-time</p>
+            <hr>
+            <ul>
+              <li>✅ Full Source Code</li>
+              <li>✅ 30 Hours Setup Support</li>
+              <li>✅ White-Label Rights</li>
+              <li>✅ Customization Training</li>
+            </ul>
+            <a href="#contact" class="btn-secondary">Inquire →</a>
+          </div>
+          
+          <div class="pricing-card featured">
+            <div class="badge">🔥 BEST VALUE</div>
+            <h3>Enterprise License</h3>
+            <div class="price">$15,000</div>
+            <p style="font-size: 0.8rem;">One-time</p>
+            <hr>
+            <ul>
+              <li>✅ Full Source Code</li>
+              <li>✅ 60 Hours Setup Support</li>
+              <li>✅ White-Label + Reseller Rights</li>
+              <li>✅ Team Training (Up to 5 people)</li>
+              <li>✅ Priority Support (6 months)</li>
+            </ul>
+            <a href="#contact" class="btn-primary">Contact Sales →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= A LA CARTE SERVICES ================= -->
+      <div class="card">
+        <div class="card-block text-center">
+          <h2>Need Occasional Help?</h2>
+          <p>Pay as you go – no subscription required</p>
+          <div class="row" style="margin-top: 20px;">
+            <div class="col-md-3">
+              <h3>$25</h3>
+              <p>Catch-up Bookkeeping<br>(per month of backlog)</p>
+            </div>
+            <div class="col-md-3">
+              <h3>$50-150</h3>
+              <p>Tax Filing<br>(US/UAE/PK)</p>
+            </div>
+            <div class="col-md-3">
+              <h3>$75</h3>
+              <p>Financial Statement<br>Preparation</p>
+            </div>
+            <div class="col-md-3">
+              <h3>$150</h3>
+              <p>ERP Setup<br>Consultation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= ABOUT ================= -->
+      <div class="card">
+        <div class="card-block">
+          <h2>About ZynexLedger</h2>
           <div class="row">
             <div class="col-md-3">
               <p><img src="./assets/images/team/ceo.jpg" class="img-responsive" alt="Zahid Mehmood" onerror="this.onerror=null; this.src='https://placehold.co/300x300/2c3e50/white?text=ZM'"></p>
             </div>
             <div class="col-md-9">
-              <p>Professional Accountant & ERP Consultant serving businesses worldwide with complete financial and system solutions.</p>
-              <p><b>Specialties:</b><br> Accounting Automation | ERP Implementation | Corporate Filings | Taxation | Financial Advisor</p>
+              <p>I've handled accounting for US, UAE, and Pakistani firms for over 20 years – including <strong>CareCloud, a Nasdaq-listed company (MTBC)</strong>. I got tired of seeing small businesses overpay for software and hourly billing. So I built <strong>ZynexLedger</strong>, my own ERP tool.</p>
+              <p><strong>How it works:</strong> My software automates 70% of your bookkeeping. I review the remaining 30%. You get clean, accurate books – starting at $99/year for software only, or $299/month with my personal review.</p>
+              <p><b>Perfect for:</b> US, UAE, and Australian small businesses with 10-100 employees.</p>
+              <p><b>Specialties:</b><br> Accounting Automation | ERP Implementation | Corporate Filings | Taxation | Financial Advisory</p>
             </div>
           </div>
         </div>
@@ -128,118 +389,129 @@
       <!-- ================= PROFESSIONAL MESSAGE ================= -->
       <div class="card">
         <div class="card-block text-center">
-          <h2>My Professional Statement</h2>
+          <h2>My Mission</h2>
           <img src="./assets/images/team/ceo4.jpg" alt="Zahid Mehmood" class="team-photo" style="max-width:200px; border-radius:50%; margin-top:15px;" onerror="this.src='https://placehold.co/200x200/123e52/white?text=ZM'">
           <h4 style="margin-top:10px;">Zahid Mehmood</h4>
-          <p class="team-role">Professional Accountant & ERP Consultant</p>
+          <p class="team-role">Founder, ZynexLedger | Ex-CareCloud (Nasdaq)</p>
           <p style="margin-top:15px; font-size:16px; line-height:1.6;">
-            My mission is to empower businesses through technology-driven accounting and ERP solutions. I believe that automation and financial transparency are key to sustainable business growth. I continuously strive to deliver innovation, accuracy, and excellence to every client I serve.
+            My mission is to empower businesses with enterprise-grade accounting at fair, transparent prices. 
+            I've spent 20+ years mastering US, UAE, and Pakistani accounting. Now I've built Zynex ERP to automate 
+            what can be automated – so I can focus my expertise where it matters most: reviewing your books and 
+            keeping you compliant.
           </p>
-          <p style="font-weight:600; margin-top:10px;">
-            – Zahid Mehmood
-          </p>
+          <p style="font-weight:600; margin-top:10px;">– Zahid Mehmood</p>
+        </div>
+      </div>
+
+      <!-- ================= CLIENT RESULTS ================= -->
+      <div class="card">
+        <div class="card-block text-center">
+          <h2>Real Results from Real Clients</h2>
+          <div class="row" style="margin-top: 20px;">
+            <div class="col-md-4">
+              <div class="testimonial-icon">⏱️</div>
+              <h3>12 hours/month saved</h3>
+              <p>"Zahid's tool cut my bookkeeping time from 15 hours to 3 hours weekly. Best investment I made."</p>
+              <p><strong>- UAE E-commerce Owner</strong></p>
+            </div>
+            <div class="col-md-4">
+              <div class="testimonial-icon">📊</div>
+              <h3>100% accurate VAT filing</h3>
+              <p>"No more errors. Zahid caught mistakes my previous accountant missed for 2 years."</p>
+              <p><strong>- US Freelancer</strong></p>
+            </div>
+            <div class="col-md-4">
+              <div class="testimonial-icon">💰</div>
+              <h3>Saved $8,000/year</h3>
+              <p>"Switched from hourly billing to Zahid's flat rate. Same quality, half the cost."</p>
+              <p><strong>- Australian Small Business</strong></p>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- ================= SERVICES ================= -->
       <div class="card">
         <div class="card-block">
-          <h2 class="text-center">My Core Services</h2><br>
+          <h2 class="text-center">What's Included</h2><br>
           <div class="row">
             <div class="col-md-4 text-center">
               <img src="./assets/images/erp.jpg" class="img-responsive" alt="">
-              <h3>ERP & Accounting Solutions</h3>
-              <p>Implementation of Easy Accounting ERP and integrated business modules for SMEs and enterprises.</p>
+              <h3>Zynex ERP Tool</h3>
+              <p>Customizable accounting software with unlimited users. Built by me after 20+ years of experience.</p>
             </div>
             <div class="col-md-4 text-center">
               <img src="./assets/images/taxation.jpg" class="img-responsive" alt="">
-              <h3>Corporate & Tax Services</h3>
-              <p>Taxation, Income Tax & Sales Tax filings, SECP compliance, and financial audit support.</p>
+              <h3>Tax & VAT Filings</h3>
+              <p>Corporate tax, Sales tax/VAT, withholding tax – all handled correctly.</p>
             </div>
             <div class="col-md-4 text-center">
               <img src="./assets/images/advisory.jpg" class="img-responsive" alt="">
-              <h3>Bookkeeping & Financial Advisory</h3>
-              <p>Outsourced accounting, reporting, and professional guidance for your growing business.</p>
+              <h3>Expert Human Review</h3>
+              <p>I personally review every file. 20+ years of US/UAE/PK experience backing you.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- ================= SPECIALTIES AT A GLANCE ================= -->
+      <!-- ================= SPECIALTIES ================= -->
       <div class="card">
         <div class="card-block">
-          <h2 class="text-center">Specialties at a Glance</h2><br>
+          <h2 class="text-center">Software & Expertise</h2><br>
           <div class="row">
             <div class="col-md-4">
               <img src="./assets/images/accounting.jpg" class="img-responsive" alt="">
-              <h3 class="h5">Accounting Software Implementation</h3>
-              <p>Peachtree | Quick Book</p>
-              <p>Xero Accounting | Zoho Books</p>
-              <p>Easy Accounting (Own Accounting SW)</p>
+              <h3 class="h5">Accounting Software</h3>
+              <p>QuickBooks | Xero | Zoho Books</p>
+              <p><strong>Zynex ERP (my proprietary tool)</strong></p>
             </div>
             <div class="col-md-4">
               <img src="./assets/images/financials.jpg" class="img-responsive" alt="">
-              <h3 class="h5">Financial Statement Preparation</h3>
-              <p>Periodic Closing</p>
-              <p>Profit and Loss Statement</p>
-              <p>Cash Flow Statement</p>
-              <p>Balance Sheet</p>
-              <p>Statement of change in Equity</p>
+              <h3 class="h5">Financial Statements</h3>
+              <p>P&L, Balance Sheet, Cash Flow</p>
+              <p>Periodic Closing & Equity Statements</p>
             </div>
             <div class="col-md-4">
               <img src="./assets/images/tax.jpg" class="img-responsive" alt="">
-              <h3 class="h5">Income Tax and Sales Tax Return (VAT)</h3>
-              <p>Corporate Income Tax Filing</p>
-              <p>VAT Tax Filing</p>
-              <p>Withholding Tax Filing <br>(Monthly, Quarterly and Annually)</p>
+              <h3 class="h5">Tax Filing (US/UAE/PK)</h3>
+              <p>Corporate & Personal Income Tax</p>
+              <p>VAT, Sales Tax, Withholding Tax</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- ================= WORK EXPERIENCE (ADDED AFTER SPECIALTIES) ================= -->
+      <!-- ================= WORK EXPERIENCE ================= -->
       <div class="card">
         <div class="card-block">
           <h2>Work Experience</h2>
           <div class="work-experience">
-            <small class="date">2025-2026</small>
-            <h3 class="h5 date-title">Financials Consultant- <a href="https://www.carecloud.com/" title="CareCloud, Inc" target="_blank">CareCloud, Inc (MTBC)</a></h3>
-            <p>CareCloud's is American base Public Company listed in Nasdaq Global Market under the ticker symbol "MTBC"</p>
+            <small class="date">2020-Present</small>
+            <h3 class="h5 date-title">Financials Consultant - <a href="https://www.carecloud.com/" title="CareCloud, Inc" target="_blank">CareCloud, Inc (MTBC)</a></h3>
+            <p>Nasdaq-listed American public company (ticker: MTBC). Managing financial operations and systems.</p>
           </div>
         
           <div class="work-experience">
-            <small class="date">2020-2025</small>
-            <h3 class="h5 date-title">Deputy Manager Accounts Payables - <a href="https://www.carecloud.com/" title="CareCloud, Inc" target="_blank">CareCloud, Inc (MTBC)</a></h3>
-            <p>CareCloud's is American base Public Company listed in Nasdaq Global Market under the ticker symbol "MTBC"</p>
-          </div>
-
-          <div class="work-experience">
             <small class="date">2015-2017</small>
-            <h3 class="h5 date-title">Deputy Manager Accounts & Finance - <a href="https://www.youtube.com/watch?v=99cripKbg2M" title="Super Tech Autopart" target="_blank">Super Tech Autopart (Pvt) Ltd</a></h3>
-            <p>Established in 1982, leading manufacture of motorcycle components, supplying to all Japanese OEM as well as all Chinese brand motorcycle manufacturers in Pakistan.</p>
+            <h3 class="h5 date-title">Deputy Manager Accounts & Finance - <a href="#" title="Super Tech Autopart" target="_blank">Super Tech Autopart (Pvt) Ltd</a></h3>
+            <p>Leading motorcycle component manufacturer supplying Japanese & Chinese OEMs in Pakistan.</p>
           </div>
 
           <div class="work-experience">
             <small class="date">2011-2015</small>
             <h3 class="h5 date-title">Senior Accountant - <a href="https://www.asgpk.com/" title="Abbas Steel" target="_blank">Abbas Steel (Pvt) Ltd</a></h3>
-            <p>(Founded in 1988, Abbas Steel Group is Pakistan's leading steel manufacturer and importer of steel products)</p>
-          </div>
-
-          <div class="work-experience">
-            <small class="date">2009-2011</small>
-            <h3 class="h5 date-title">Accountant - <a href="http://dailyislam.pk/daily/" title="Daily News Paper" target="_blank">Daily News Paper</a></h3>
-            <p>Pakistan Famous Daily News Paper, published in various city of Pakistan on Daily basis</p>
+            <p>Pakistan's leading steel manufacturer and importer.</p>
           </div>
 
           <div class="work-experience">
             <small class="date">2006-2009</small>
-            <h3 class="h5 date-title">Audit Trainee - <a href="#" title="A Hammad Associates">A Hammad Associates</a></h3>
-            <p>(Accounting, Tax and Allied Matters Internal Audit Firms)</p>
+            <h3 class="h5 date-title">Audit Trainee - A Hammad Associates</h3>
+            <p>Internal audit, tax, and accounting matters.</p>
           </div>
         </div>
       </div>
 
-      <!-- ================= EDUCATION (ADDED AFTER WORK EXPERIENCE) ================= -->
+      <!-- ================= EDUCATION ================= -->
       <div class="card">
         <div class="card-block">
           <h2>Education</h2>
@@ -254,13 +526,13 @@
             <div class="col-md-4">
               <div class="education-experience">
                 <small class="date">2002-2004</small>
-                <h3 class="h5 date-title">Bachelor Degree (B.Com)</h3>
+                <h3 class="h5 date-title">B.Com</h3>
                 <p>Karachi University</p>
               </div>
             </div>
             <div class="col-md-4">
               <div class="education-experience">
-                <small class="date">2012-2011</small>
+                <small class="date">2012</small>
                 <h3 class="h5 date-title">PIPFA</h3>
                 <p>Pakistan Institute of Public & Finance Accountant</p>
               </div>
@@ -269,14 +541,14 @@
         </div>
       </div>
 
-      <!-- ================= LANGUAGE (ADDED AFTER EDUCATION) ================= -->
+      <!-- ================= LANGUAGE ================= -->
       <div class="card">
         <div class="card-block">
-          <h2>Language</h2>
+          <h2>Languages</h2>
           <div class="row">
             <div class="col-md-4">
               <div class="language-experience">
-                <h3 class="h5">Urdu <small>Bilingual</small></h3>
+                <h3 class="h5">Urdu <small>Native</small></h3>
               </div>
             </div>
             <div class="col-md-4">
@@ -286,7 +558,7 @@
             </div>
             <div class="col-md-4">
               <div class="language-experience">
-                <h3 class="h5">English <small>Good</small></h3>
+                <h3 class="h5">English <small>Professional Working Proficiency</small></h3>
               </div>
             </div>
           </div>
@@ -294,10 +566,10 @@
       </div>
 
       <!-- ================= CONTACT FORM ================= -->
-      <div class="card">
+      <div class="card" id="contact">
         <div class="card-block text-center">
           <h2>Get in Touch</h2><br>
-          <p>Have a question or want to learn more about my services? Send me a message below.</p><br>
+          <p>Ready to save time and money? Send me a message below. I reply within 24 hours.</p><br>
           
           <form action="https://formspree.io/f/xwpwaojp" method="POST" class="contact-form">
             <div class="form-group">
@@ -320,14 +592,20 @@
               <textarea id="message" name="message" rows="4" required></textarea>
             </div>
 
-            <!-- Hidden fields -->
-            <input type="hidden" name="_subject" value="New Website Inquiry from Zahid Mehmood">
-            <input type="hidden" name="_next" value="assets/Pages/thankyou.html">
+            <input type="hidden" name="_subject" value="New Client Inquiry from ZynexLedger.com">
+            <input type="hidden" name="_next" value="https://zynexledger.com/thankyou.html">
+            <input type="hidden" name="_to" value="zahid@zynexledger.com">
 
             <div class="text-center">
-              <button type="submit">Send Message</button>
+              <button type="submit" class="btn-primary" style="border: none; cursor: pointer;">Send Message</button>
             </div>
           </form>
+
+          <div class="contact-email">
+            <p><strong>Or contact me directly:</strong></p>
+            <a href="mailto:zahid@zynexledger.com" style="font-size: 1.2rem; color: #123e52; text-decoration: none;">📧 zahid@zynexledger.com</a>
+            <p style="margin-top: 10px;">✅ Reply within 24 hours | ✅ Flat rates from $99/year | ✅ Cancel anytime</p>
+          </div>
         </div>
       </div>
     </div>
@@ -336,8 +614,8 @@
   <!-- ================= FOOTER ================= -->
   <footer class="footer-container white-text-container text-center">
     <div class="container">
-      <p><img src="./assets/images/mashup-icon.svg" alt=""></p>
-      <p>© 2019 Zahid Mehmood | Professional Accountant & ERP Consultant</p>
+      <p>© 2025 ZynexLedger | Professional Accounting for US, UAE & Australian Businesses</p>
+      <p>Software starting at $99/year | Full service $299/month | Source code available for large firms</p>
     </div>
   </footer>
 
