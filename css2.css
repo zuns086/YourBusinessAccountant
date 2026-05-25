@@ -443,6 +443,7 @@ header.white-text-container p::after {
 .slider-container {
   width: 100%;
   max-width: 700px;
+  height: 100%;
   margin: 50px auto;
   overflow: hidden;
   border-radius: 12px;
