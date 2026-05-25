@@ -442,7 +442,7 @@ header.white-text-container p::after {
 /* ===== ERP SLIDER ===== */
 .slider-container {
   width: 100%;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 50px auto;
   overflow: hidden;
   border-radius: 12px;
