@@ -1,0 +1,28 @@
+RewriteEngine On
+RewriteBase /
+
+# ------------------------------------------------------------
+# 1. Clean URLs for your 6 main pages
+# ------------------------------------------------------------
+RewriteRule ^pricing$ assets/Pages/Pricing.html [L,NC]
+RewriteRule ^zynex-tool$ assets/Pages/Zynex_Tool.html [L,NC]
+RewriteRule ^erp$ assets/Pages/erp.html [L,NC]
+RewriteRule ^bookkeeping$ assets/Pages/Bookkeeping.html [L,NC]
+RewriteRule ^clients$ assets/Pages/clients.html [L,NC]
+RewriteRule ^contact$ assets/Pages/ContactUs.html [L,NC]
+
+# ------------------------------------------------------------
+# 2. (Optional) Remove .html from ANY page automatically
+#    Comment out if it causes conflicts
+# ------------------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# ------------------------------------------------------------
+# 3. Force lowercase URLs (optional but professional)
+# ------------------------------------------------------------
+RewriteMap lc int:tolower
+RewriteCond %{REQUEST_URI} [A-Z]
+RewriteRule (.*) ${lc:$1} [R=301,L]
