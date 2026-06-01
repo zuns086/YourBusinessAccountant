@@ -1,53 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta content="width=device-width,initial-scale=1" name="viewport">
-
-  <meta name="description"
-    content="Zahid Mehmood - Pricing Plans for Accounting & ERP Services">
-
-  <meta name="google" content="notranslate" />
-
-  <title>
-    Pricing | Zahid Mehmood - Professional Accountant & ERP Consultant
-  </title>
+  <meta name="description" content="Pricing Plans - Zynex Accounting (Pvt) Ltd. Professional accounting, ERP solutions, and bookkeeping services.">
+  <title>Pricing | Zahid Mehmood - Professional Accountant & ERP Consultant</title>
 
   <link href="../favicon.ico" rel="icon">
-
-  <!-- SAME CSS AS INDEX -->
+  
+  <!-- SAME CSS AS BOOKKEEPING PAGE - These already contain navbar styling -->
   <link href="../../main.d8e0d294.css" rel="stylesheet">
   <link href="../../css2.css" rel="stylesheet">
-
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
   <script src="../../jquery-3.6.0.min.js"></script>
 
- <style>
+  <style>
+    /* ================= ONLY PRICING-SPECIFIC CSS ================= */
+    /* (Navbar styling is already in the referenced CSS files) */
 
-/* ================= BASE LAYOUT ================= */
+    .pricing-grid {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 30px 0;
+    }
 
-.pricing-grid {
-  display: flex;
-  gap: 25px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 30px 0;
-}
-  .contact-direct {
+    .pricing-card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      width: 300px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+      text-align: center;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .pricing-card.featured {
+      border: 2px solid #ffb347;
+      background: #fffaf5;
+    }
+
+    .pricing-card h3 {
+      color: #123e52;
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+      font-weight: 800;
+    }
+
+    .pricing-card .price {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #ff8c2e;
+      margin-bottom: 10px;
+    }
+
+    .pricing-card .price small {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .pricing-card ul {
+      text-align: left;
+      padding-left: 20px;
+      margin: 20px 0;
+    }
+
+    .pricing-card ul li {
+      margin: 10px 0;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      font-weight: normal;
+      color: #444;
+    }
+
+    .btn-pricing {
+      display: inline-block;
+      background: #ffb347;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin-top: 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: background 0.2s ease;
+    }
+
+    .btn-pricing:hover {
+      background: #ff8c2e;
+      color: white;
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      background: #123e52;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin-top: 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: background 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      background: #1a5270;
+      color: white;
+    }
+
+    .badge {
+      background: #ffb347;
+      color: #123e52;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    .source-code-section {
+      background: #f0f7ff;
+      padding: 30px;
+      border-radius: 12px;
+      margin: 30px 0;
+      text-align: center;
+    }
+
+    .source-code-section h2 {
+      font-size: 1.8rem;
+      font-weight: 800;
+    }
+
+    .source-code-section p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .col-md-3 {
+      flex: 1;
+      min-width: 180px;
+    }
+
+    .col-md-3 h3 {
+      font-size: 1.6rem;
+      color: #ff8c2e;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .col-md-3 p {
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .comparison-table th {
+      background: #1e3c72;
+      color: white;
+      font-weight: bold;
+    }
+
+    .comparison-table tr:hover {
+      background: #f5f5f5;
+    }
+
+    .comparison-table td:first-child,
+    .comparison-table th:first-child {
+      font-weight: bold;
+    }
+
+    .green-text {
+      color: #28a745;
+      font-weight: bold;
+    }
+
+    .red-text {
+      color: #dc3545;
+    }
+
+    .info-box {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 5px;
+      text-align: left;
+    }
+
+    .info-box strong {
+      color: #856404;
+    }
+
+    .contact-direct {
       margin-top: 20px;
       padding: 20px;
       background: #f5f5f5;
       border-radius: 8px;
       text-align: center;
     }
+
     .contact-method {
       display: inline-block;
       margin: 10px;
@@ -56,534 +240,265 @@
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
+
     .contact-method a {
       text-decoration: none;
       color: #123e52;
       font-weight: bold;
     }
+
     .contact-method i {
       margin-right: 8px;
       color: #ffb347;
     }
-  .pricing-card {
-  background: white;
-  border-radius: 12px;
-  padding: 25px;
-  width: 300px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
-  text-align: center;
-}
 
-.pricing-card:hover {
-  transform: translateY(-6px);
-}
-
-.pricing-card.featured {
-  border: 2px solid #ffb347;
-  background: #fffaf5;
-}
-
-/* ================= HEADINGS ================= */
-
-.pricing-card h3 {
-  color: #123e52;
-  font-size: 2.2rem;
-  margin-bottom: 12px;
-  font-weight: 800;
-}
-
-/* ================= PRICE ================= */
-
-.pricing-card .price {
-  font-size: 2.8rem;
-  font-weight: 800;
-  color: #ff8c2e;
-  margin-bottom: 10px;
-}
-
-.pricing-card .price small {
-  font-size: 1.5rem;
-  color: #666;
-}
-
-/* ================= BULLETS (FIXED - MAIN ISSUE) ================= */
-
-.pricing-card ul {
-  text-align: left;
-  padding-left: 28px;
-  margin: 20px 0;
-}
-
-.pricing-card ul li {
-  margin: 12px 0;
-  font-size: 1.25rem;
-  line-height: 1.8;
-  font-weight: 600;
-  color: #222;
-}
-
-/* ================= BUTTONS ================= */
-
-.btn-pricing {
-  display: inline-block;
-  background: #ffb347;
-  color: white;
-  padding: 12px 25px;
-  border-radius: 5px;
-  margin-top: 15px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.5rem;
-  transition: background 0.2s ease;
-}
-
-.btn-pricing:hover {
-  background: #ff8c2e;
-  color: white;
-}
-
-.btn-secondary {
-  display: inline-block;
-  background: #123e52;
-  color: white;
-  padding: 12px 25px;
-  border-radius: 5px;
-  margin-top: 15px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.4rem;
-  transition: background 0.2s ease;
-}
-
-.btn-secondary:hover {
-  background: #1a5270;
-  color: white;
-}
-
-/* ================= BADGE ================= */
-
-.badge {
-  background: #ffb347;
-  color: #123e52;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 1rem;
-  font-weight: bold;
-  display: inline-block;
-  margin-bottom: 12px;
-}
-
-/* ================= SECTIONS ================= */
-
-.source-code-section {
-  background: #f0f7ff;
-  padding: 30px;
-  border-radius: 12px;
-  margin: 30px 0;
-  text-align: center;
-}
-
-.source-code-section h2 {
-  font-size: 2.3rem;
-  font-weight: 800;
-}
-
-.source-code-section p {
-  font-size: 1.5rem;
-  line-height: 1.6;
-}
-
-/* ================= A LA CARTE ================= */
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.col-md-3 {
-  flex: 1;
-  min-width: 200px;
-}
-
-.col-md-3 h3 {
-  font-size: 2rem;
-  color: #ff8c2e;
-  font-weight: 800;
-  margin-bottom: 10px;
-}
-
-.col-md-3 p {
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-
-/* ================= GLOBAL TYPOGRAPHY FIX ================= */
-
-.card h2 {
-  font-size: 2.3rem;
-  font-weight: 800;
-}
-
-.card p {
-  font-size: 1.5rem;
-  line-height: 1.7;
-}
-
-/* ================= CONTACT ================= */
-
-.contact-direct {
-  margin-top: 20px;
-  padding: 25px;
-  background: #f5f5f5;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.contact-method {
-  display: inline-block;
-  margin: 10px;
-  padding: 12px 25px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.contact-method a {
-  text-decoration: none;
-  color: #123e52;
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-.contact-method i {
-  margin-right: 8px;
-  color: #ffb347;
-  font-size: 1.2rem;
-}
-
-/* ================= TEXT HELPERS ================= */
-
-.text-center {
-  text-align: center;
-}
-
-</style>
-
+    @media (max-width: 768px) {
+      .pricing-card {
+        width: 100%;
+        max-width: 320px;
+      }
+      .source-code-section {
+        padding: 20px;
+      }
+      .comparison-table {
+        font-size: 12px;
+      }
+      .comparison-table th,
+      .comparison-table td {
+        padding: 8px 10px;
+      }
+      .row {
+        flex-direction: column;
+        align-items: center;
+      }
+      .col-md-3 {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
-
-  <!-- SAME BACKGROUND STRUCTURE AS INDEX -->
-
-  <div class="background-color-layer"
-    style="background-image: url('../../assets/images/accounting-bg.jpg')">
-  </div>
+  <div class="background-color-layer" style="background-image: url('../../assets/images/accounting-bg.jpg')"></div>
 
   <main class="content-wrapper">
-
-    <!-- HEADER -->
-
     <header class="white-text-container section-container text-center">
-
       <h1>Zahid Mehmood</h1>
+      <p>Professional Accountant & ERP Consultant serving businesses worldwide.</p>
 
-      <p>
-        Professional Accountant & ERP Consultant serving businesses worldwide.
-      </p>
-
-      <!-- SAME NAVIGATION STYLE -->
-
+      <!-- SAME NAVIGATION AS BOOKKEEPING PAGE -->
       <nav class="nav-container">
         <a href="/index.html" class="nav-link"><i class="fa fa-home"></i> Home</a>
-
-        <a href="/assets/Pages/Zynex_Tool.html" class="nav-link active"><i class="fa fa-cloud"></i> Zynex ERP</a>
+        <a href="/assets/Pages/Zynex_Tool.html" class="nav-link"><i class="fa fa-cloud"></i> Zynex ERP</a>
         <a href="/assets/Pages/erp.html" class="nav-link"><i class="fa fa-cogs"></i> ERP Solutions</a>
         <a href="/assets/Pages/Bookkeeping.html" class="nav-link"><i class="fa fa-balance-scale"></i> Bookkeeping</a>
         <a href="/assets/Pages/clients.html" class="nav-link"><i class="fa fa-users"></i> Clients & Projects</a>
         <a href="/assets/Pages/ContactUs.html" class="nav-link"><i class="fa fa-envelope"></i> Contact Us</a>
       </nav>
-
     </header>
 
     <div class="container">
-
-      <!-- SMALL BUSINESS PRICING -->
-
+      <!-- ================= SMALL BUSINESS PRICING ================= -->
       <div class="card">
-
         <div class="card-block">
-
-          <h2 class="text-center">Pricing Plans for Small Businesses</h2>
-
-          <p class="text-center">
-            Choose the plan that fits your business needs
-          </p>
+          <h2 class="text-center">📊 Monthly Accounting & Bookkeeping Plans</h2>
+          <p class="text-center">Choose the plan that fits your business needs — All plans include Zynex ERP Tool Access</p>
 
           <div class="pricing-grid">
-
-            <!-- BASIC -->
-
             <div class="pricing-card">
-
               <h3>Basic</h3>
-
-              <div class="price">
-                $99
-                <small>/year</small>
-              </div>
-
+              <div class="price">$99 <small>/year</small></div>
               <ul>
                 <li>✅ Zynex ERP Tool Access</li>
                 <li>✅ Unlimited Invoices & Users</li>
                 <li>✅ Email Support</li>
+                <li>✅ Basic Reporting</li>
               </ul>
-
-              <a href="ContactUs.html" class="btn-secondary">
-                Get Started →
-              </a>
-
+              <a href="ContactUs.html" class="btn-secondary">Get Started →</a>
             </div>
 
-            <!-- PROFESSIONAL (FEATURED) -->
-
             <div class="pricing-card featured">
-
-              <div class="badge">
-                🔥 MOST POPULAR
-              </div>
-
+              <div class="badge">🔥 MOST POPULAR</div>
               <h3>Professional</h3>
-
-              <div class="price">
-                $299
-                <small>/month</small>
-              </div>
-
+              <div class="price">$299 <small>/month</small></div>
               <ul>
                 <li>✅ Zynex ERP Tool Access</li>
                 <li>✅ Monthly Bookkeeping Review</li>
                 <li>✅ Quarterly Tax Check</li>
-                <li>✅ WhatsApp Support</li>
-                <li>✅ 20+ Years Expertise</li>
+                <li>✅ WhatsApp Priority Support</li>
+                <li>✅ 21+ Years Expertise</li>
               </ul>
-
-              <a href="ContactUs.html" class="btn-pricing">
-                Start Free Trial →
-              </a>
-
+              <a href="ContactUs.html" class="btn-pricing">Start Free Trial →</a>
             </div>
 
-            <!-- PREMIUM -->
-
             <div class="pricing-card">
-
               <h3>Premium</h3>
-
-              <div class="price">
-                $99
-                <small>/month</small>
-              </div>
-
+              <div class="price">$99 <small>/month</small></div>
               <ul>
                 <li>✅ Everything in Professional</li>
                 <li>✅ Weekly Bookkeeping Review</li>
-                <li>✅ Full Tax Filing</li>
+                <li>✅ Full Tax Filing (UAE/PK)</li>
                 <li>✅ SECP Compliance</li>
                 <li>✅ Dedicated Accountant (Zahid)</li>
               </ul>
-
-              <a href="ContactUs.html" class="btn-secondary">
-                Contact for Trial →
-              </a>
-
+              <a href="ContactUs.html" class="btn-secondary">Contact for Trial →</a>
             </div>
-
           </div>
-
-     
-
         </div>
-
       </div>
 
-      <!-- ================= FOR LARGE FIRMS & ERP CONSULTANTS ================= -->
-
-     <!-- ================= FOR LARGE FIRMS & ERP CONSULTANTS ================= -->
-
-<div id="large-firms-section" class="source-code-section" style="scroll-margin-top: 80px;">
-
-  <h2>🏢 For Large Firms & ERP Consultants</h2>
-
-  <p>
-    <strong>Buy Zynex ERP Source Code – One-time payment. No recurring fees. White-label rights available.</strong>
-  </p>
-
-  <div class="pricing-grid">
-
-    <!-- Basic License -->
-    <div class="pricing-card">
-      <h3>Basic License</h3>
-      <div class="price">$5,000</div>
-      <p style="font-size: 0.9rem;">One-time payment</p>
-      <ul>
-        <li>✅ Full Source Code</li>
-        <li>✅ 10 Hours Setup Support</li>
-        <li>✅ Documentation</li>
-      </ul>
-      <a href="ContactUs.html" class="btn-secondary">Inquire →</a>
-    </div>
-
-    <!-- Professional License -->
-    <div class="pricing-card">
-      <h3>Professional License</h3>
-      <div class="price">$10,000</div>
-      <p style="font-size: 0.9rem;">One-time payment</p>
-      <ul>
-        <li>✅ Full Source Code</li>
-        <li>✅ 30 Hours Setup Support</li>
-        <li>✅ White-Label Rights</li>
-        <li>✅ Customization Training</li>
-      </ul>
-      <a href="ContactUs.html" class="btn-secondary">Inquire →</a>
-    </div>
-
-    <!-- Enterprise License (FEATURED) -->
-    <div class="pricing-card featured">
-      <div class="badge">🔥 BEST VALUE</div>
-      <h3>Enterprise License</h3>
-      <div class="price">$15,000</div>
-      <p style="font-size: 0.9rem;">One-time payment</p>
-      <ul>
-        <li>✅ Full Source Code</li>
-        <li>✅ 60 Hours Setup Support</li>
-        <li>✅ White-Label + Reseller Rights</li>
-        <li>✅ Team Training (Up to 5 people)</li>
-        <li>✅ Priority Support (6 months)</li>
-      </ul>
-      <a href="ContactUs.html" class="btn-pricing">Contact Sales →</a>
-    </div>
-
-  </div>
-
-</div>
-      <!-- ================= A LA CARTE SERVICES ================= -->
-
-      <div class="card">
-
-        <div class="card-block text-center">
-
-          <h2>Need Occasional Help?</h2>
-
-          <p>Pay as you go – no subscription required</p>
-
-          <div class="row">
-
-            <div class="col-md-3">
-              <h3>$99</h3>
-              <p>Catch-up Bookkeeping</p>
-            </div>
-
-            <div class="col-md-3">
-              <h3>$ 100-150</h3>
-              <p>Tax Filing (UAE/PK)</p>
-            </div>
-
-            <div class="col-md-3">
-              <h3>$ 300</h3>
-              <p>Financial Statements</p>
-            </div>
-
-            <div class="col-md-3">
-              <h3>$ 99</h3>
-              <p>ERP Consultation</p>
-            </div>
-
-          </div>
-
-          <a href="ContactUs.html" class="btn-secondary" style="margin-top: 20px; display: inline-block;">
-            Contact for Help →
-          </a>
-
+      <!-- ================= ZYNEX ERP SOURCE CODE ================= -->
+      <div id="large-firms-section" class="source-code-section">
+        <h2>🏢 Zynex ERP - Complete Source Code</h2>
+        
+        <div class="info-box">
+          <strong>💡 Built by a Finance Professional with 21+ Years Experience</strong><br>
+          Unlike SAP and Oracle which require expensive ABAP or Oracle EBS developers ($2,000 - $6,000/month), 
+          Zynex ERP is built on <strong>Microsoft .NET (C#) and SQL Server</strong> — the most common and affordable technology stack.
+          <br><br>
+          <strong>✅ Hire a .NET Developer for just $500 - $1,000/month to customize everything!</strong>
         </div>
 
+        <p>
+          <strong>Buy Zynex ERP Source Code – One-time payment. No recurring license fees. White-label rights available.</strong><br>
+          <strong>Best Replacement for SAP and Oracle.</strong> No need to hire expensive SAP or Oracle specialists. 
+          Any .NET developer can customize the entire application according to your business needs.
+        </p>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>📦 Core ERP</h3>
+            <div class="price">$4,999</div>
+            <p style="font-size: 0.85rem;">One-time payment</p>
+            <ul>
+              <li>✅ General Ledger (GL)</li>
+              <li>✅ Accounts Payable (AP)</li>
+              <li>✅ Accounts Receivable (AR)</li>
+              <li>✅ Inventory Management (INV)</li>
+              <li>✅ Point of Sale (POS)</li>
+              <li>✅ Full Source Code</li>
+              <li>✅ 10 Hours Setup Support</li>
+            </ul>
+            <a href="ContactUs.html" class="btn-secondary">Inquire →</a>
+          </div>
+
+          <div class="pricing-card featured">
+            <div class="badge">🔥 MOST POPULAR</div>
+            <h3>🚀 Professional</h3>
+            <div class="price">$6,999</div>
+            <p style="font-size: 0.85rem;">One-time payment</p>
+            <ul>
+              <li>✅ Core ERP + ONE of:</li>
+              <li>• HR Module</li>
+              <li>• Manufacturing Module</li>
+              <li>• Fixed Assets Module</li>
+              <li>✅ White-Label Rights</li>
+              <li>✅ 20 Hours Customization Support</li>
+              <li>✅ Team Training (Up to 2 people)</li>
+            </ul>
+            <a href="ContactUs.html" class="btn-pricing">Contact Sales →</a>
+          </div>
+
+          <div class="pricing-card">
+            <h3>👑 Enterprise</h3>
+            <div class="price">$9,999</div>
+            <p style="font-size: 0.85rem;">One-time payment</p>
+            <ul>
+              <li>✅ ALL Modules Included</li>
+              <li>✅ Full Source Code Ownership</li>
+              <li>✅ White-Label + Reseller Rights</li>
+              <li>✅ 40 Hours Customization Support</li>
+              <li>✅ Priority Support (12 months)</li>
+              <li>✅ Team Training (Up to 5 people)</li>
+            </ul>
+            <a href="ContactUs.html" class="btn-secondary">Contact Enterprise →</a>
+          </div>
+        </div>
+
+        <div style="background: #1e3c72; color: white; border-radius: 10px; padding: 20px; margin-top: 20px;">
+          <h3 style="margin-bottom: 10px;">🔧 Post-Purchase Customization Support</h3>
+          <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+            <span style="background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px;">💻 .NET Developer Support: $500-1,000/month</span>
+            <span style="background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px;">📞 Technical Support: $200/month</span>
+            <span style="background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px;">🚀 Custom Features: Quotation Based</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= COMPARISON TABLE ================= -->
+      <div class="card">
+        <div class="card-block">
+          <h2 class="text-center">📊 Zynex ERP vs SAP vs Oracle</h2>
+          <p class="text-center">Why pay 90% more for the same functionality?</p>
+          
+          <table class="comparison-table">
+            <thead>
+              <tr><th>Feature</th><th>SAP / Oracle</th><th>Zynex ERP</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>💰 License Cost</td><td class="red-text">$50,000 - $200,000+ (Yearly)</td><td class="green-text">$4,999 - $9,999 (One-time)</td></tr>
+              <tr><td>💻 Developer Salary</td><td class="red-text">$2,000 - $6,000/month (ABAP/Oracle EBS)</td><td class="green-text">$500 - $1,000/month (.NET)</td></tr>
+              <tr><td>🔧 Customization</td><td class="red-text">Very Difficult, Vendor Lock-in</td><td class="green-text">Full Access, Easy to Modify</td></tr>
+              <tr><td>🏢 Annual Maintenance</td><td class="red-text">22% of License Fee (+8% yearly increase)</td><td class="green-text">Optional Support: $200/month</td></tr>
+              <tr><td>📦 Modules Included</td><td class="red-text">Purchased Separately (Expensive)</td><td class="green-text">All Core Modules + Optional Add-ons</td></tr>
+            </tbody>
+          </table>
+          
+          <div class="info-box" style="background: #d4edda; border-left-color: #28a745;">
+            <strong>✅ Save 90% on your ERP investment!</strong> Get the same functionality as SAP/Oracle with Zynex ERP.
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= A LA CARTE SERVICES ================= -->
+      <div class="card">
+        <div class="card-block text-center">
+          <h2>Need Occasional Help?</h2>
+          <p>Pay as you go – no subscription required</p>
+          <div class="row">
+            <div class="col-md-3"><h3>$99</h3><p>Catch-up Bookkeeping</p></div>
+            <div class="col-md-3"><h3>$100-150</h3><p>Tax Filing (UAE/PK)</p></div>
+            <div class="col-md-3"><h3>$300</h3><p>Financial Statements</p></div>
+            <div class="col-md-3"><h3>$99</h3><p>ERP Consultation</p></div>
+          </div>
+          <a href="ContactUs.html" class="btn-secondary" style="margin-top: 20px; display: inline-block;">Contact for Help →</a>
+        </div>
       </div>
 
       <!-- ================= CONTACT SECTION ================= -->
-
-         <div class="card">
+      <div class="card">
         <div class="card-block text-center">
           <h2>Get in Touch</h2>
           <p>Have a question or want to learn more about my services? Contact me directly.</p>
-          
           <div class="contact-direct">
-            <div class="contact-method">
-              <i class="fa fa-whatsapp"></i>
-              <a href="https://wa.me/923343925086" target="_blank">WhatsApp: +92 334 3925086</a>
-            </div>
-            <div class="contact-method">
-              <i class="fa fa-phone"></i>
-              <a href="tel:+923343925086">Call: +92 334 3925086</a>
-            </div>
-            <div class="contact-method">
-              <i class="fa fa-envelope"></i>
-              <a href="mailto:zuns086@live.com">Email: zuns086@live.com</a>
-            </div>
+            <div class="contact-method"><i class="fa fa-whatsapp"></i><a href="https://wa.me/923343925086" target="_blank">WhatsApp: +92 334 3925086</a></div>
+            <div class="contact-method"><i class="fa fa-phone"></i><a href="tel:+923343925086">Call: +92 334 3925086</a></div>
+            <div class="contact-method"><i class="fa fa-envelope"></i><a href="mailto:zuns086@live.com">Email: zuns086@live.com</a></div>
           </div>
-          
           <p style="margin-top: 15px;">✅ I reply within 24 hours | ✅ Flat $299/month | ✅ Cancel anytime</p>
         </div>
       </div>
     </div>
-  
-
   </main>
 
-  <!-- FOOTER -->
-
+  <!-- ================= FOOTER ================= -->
   <footer class="footer-container white-text-container text-center">
-
     <div class="container">
-
-      <p>
-        <img src="../../assets/images/mashup-icon.svg" alt="">
-      </p>
-
-      <p>
-        <a href="Pricing.html" style="color:#ffb347;">
-          View Pricing
-        </a>
-
-        |
-
-        © 2019 Zahid Mehmood |
-        Professional Accountant & ERP Consultant
-      </p>
-   <p style="font-size: 1.3rem; margin-bottom: 5px; color: #fbf9f9;">ZYNEX ACCOUNTING (PRIVATE) LIMITED  </p>
-   <p style="font-size: 1.3rem; color: #fcfcfc; margin-bottom: 5px;">Inc. No. 0312734 | NTN: H892310-5   </p> 
+      <p><img src="../../assets/images/mashup-icon.svg" alt=""></p>
+      <p><a href="Pricing.html" style="color:#ffb347;">View Pricing</a> | © 2025 Zahid Mehmood | Professional Accountant & ERP Consultant | 21+ Years Experience</p>
+      <p style="font-size: 0.9rem; margin-bottom: 5px; color: #fbf9f9;">ZYNEX ACCOUNTING (PRIVATE) LIMITED</p>
+      <p style="font-size: 0.9rem; color: #fcfcfc; margin-bottom: 5px;">Inc. No. 0312734 | NTN: H892310-5</p> 
     </div>
-
   </footer>
 
   <script>
-
     document.addEventListener("DOMContentLoaded", function () {
-
       if (typeof scrollRevelation !== 'undefined') {
-
         scrollRevelation('.card');
-
       }
-
     });
-
   </script>
-
-  <script type="text/javascript"
-    src="../../main.bc58148c.js"></script>
-
+  <script type="text/javascript" src="../../main.bc58148c.js"></script>
 </body>
-
 </html>
