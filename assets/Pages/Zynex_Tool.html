@@ -47,7 +47,83 @@
       margin-bottom: 15px;
       font-weight: 700;
     }
-
+    
+    .about-ceo-img {
+      max-width: 160px;
+      border-radius: 50%;
+      border: 4px solid #ffb347;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
+      transition: transform 0.2s ease;
+    }
+    
+    .about-ceo-img:hover {
+      transform: scale(1.02);
+    }
+    
+    .team-photo {
+      max-width: 180px;
+      width: 100%;
+      border-radius: 50%;
+      margin-top: 15px;
+      border: 3px solid #ffb347;
+      padding: 3px;
+      background: white;
+      transition: transform 0.2s ease;
+    }
+    
+    .team-photo:hover {
+      transform: scale(1.03);
+    }
+    
+    /* Team Section Styles - Fixed and Properly Aligned */
+    .team-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 20px;
+    }
+    
+    .team-member {
+      background: white;
+      border-radius: 16px;
+      padding: 20px 15px;
+      text-align: center;
+      flex: 1;
+      min-width: 200px;
+      max-width: 250px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease;
+    }
+    
+    .team-member:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    }
+    
+    .team-member h4 {
+      color: #123e52;
+      font-size: 1.3rem;
+      margin: 15px 0 5px;
+      font-weight: 700;
+    }
+    
+    .team-role {
+      color: #ff8c2e;
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    
+    .card-block {
+      padding: 20px;
+    }
+    
+    .text-center {
+      text-align: center;
+    }
+    
     @media (min-width: 768px) {
       .tool-header h1 {
         font-size: 2.8rem;
@@ -55,13 +131,13 @@
     }
 
     .tool-header p {
-      font-size: 1.9rem;
+      font-size: 1.2rem;
       opacity: 0.9;
     }
 
     @media (min-width: 768px) {
       .tool-header p {
-        font-size: 1.9rem;
+        font-size: 1.4rem;
       }
     }
 
@@ -73,12 +149,12 @@
       border-radius: 40px;
       font-weight: bold;
       margin-top: 20px;
-      font-size: 1.3rem;
+      font-size: 1rem;
     }
 
     @media (min-width: 768px) {
       .tool-badge {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         padding: 12px 30px;
       }
     }
@@ -121,7 +197,7 @@
 
     .feature-card p {
       color: #4a627a;
-      font-size: 1.5rem;
+      font-size: 0.95rem;
       line-height: 1.5;
     }
 
@@ -182,7 +258,7 @@
 
     .screenshot-card h4 {
       color: #123e52;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       margin: 15px 0 10px;
       font-weight: 700;
     }
@@ -195,13 +271,13 @@
 
     .screenshot-card p {
       color: #4a627a;
-      font-size: 1.3rem;
+      font-size: 0.9rem;
       line-height: 1.5;
     }
 
     @media (min-width: 768px) {
       .screenshot-card p {
-        font-size: 1.3rem;
+        font-size: 0.95rem;
       }
     }
 
@@ -257,6 +333,7 @@
       border-radius: 16px;
       padding: 25px;
       margin-bottom: 35px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
 
     .card h2 {
@@ -288,7 +365,7 @@
 
     .module-col h4 {
       color: #123e52;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       margin-bottom: 18px;
       border-left: 4px solid #ffb347;
       padding-left: 15px;
@@ -305,13 +382,13 @@
       padding: 10px 0 10px 28px;
       position: relative;
       text-align: left;
-      font-size: 1.3rem;
+      font-size: 0.95rem;
       font-weight: 500;
     }
 
     @media (min-width: 768px) {
       .module-list li {
-        font-size: 1.3rem;
+        font-size: 1rem;
       }
     }
 
@@ -333,14 +410,14 @@
       border-radius: 50px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.5rem;
+      font-size: 1.1rem;
       margin: 10px;
       transition: background 0.2s;
     }
 
     @media (min-width: 768px) {
       .btn-large {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         padding: 16px 45px;
       }
     }
@@ -357,45 +434,20 @@
       border-radius: 50px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.5rem;
+      font-size: 1.1rem;
       margin: 10px;
       transition: background 0.2s;
     }
 
     @media (min-width: 768px) {
       .btn-secondary-large {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         padding: 16px 45px;
       }
     }
 
     .btn-secondary-large:hover {
       background: #1a5270;
-    }
-
-    .text-center {
-      text-align: center;
-    }
-
-    .text-center h2 {
-      font-size: 1.6rem;
-      font-weight: 700;
-    }
-
-    @media (min-width: 768px) {
-      .text-center h2 {
-        font-size: 1.9rem;
-      }
-    }
-
-    .text-center p {
-      font-size: 1.5rem;
-    }
-
-    @media (min-width: 768px) {
-      .text-center p {
-        font-size: 1.5rem;
-      }
     }
 
     .container {
@@ -407,6 +459,38 @@
     @media (min-width: 768px) {
       .container {
         padding: 20px;
+      }
+    }
+    
+    /* Image responsive fix */
+    .img-responsive {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    /* Row clearfix */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    /* col-md-3 equivalent */
+    .col-md-3 {
+      flex: 0 0 auto;
+      width: 25%;
+      padding: 0 15px;
+      box-sizing: border-box;
+    }
+    
+    @media (max-width: 768px) {
+      .col-md-3 {
+        width: 50%;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .col-md-3 {
+        width: 100%;
       }
     }
   </style>
@@ -422,31 +506,23 @@
   <main class="content-wrapper">
 
     <!-- HEADER - SAME AS INDEX -->
-
     <header class="white-text-container section-container text-center">
-
       <h1>Zahid Mehmood</h1>
+      <p>Professional Accountant & ERP Consultant serving businesses worldwide.</p>
 
-      <p>
-        Professional Accountant & ERP Consultant serving businesses worldwide.
-      </p>
-
-        <nav class="nav-container">
-          <a href="/index.html" class="nav-link"><i class="fa fa-home"></i> Home</a>
+      <nav class="nav-container">
+        <a href="/index.html" class="nav-link"><i class="fa fa-home"></i> Home</a>
         <a href="/assets/Pages/Pricing.html" class="nav-link"><i class="fa fa-dollar"></i> Pricing</a>
-
         <a href="/assets/Pages/erp.html" class="nav-link"><i class="fa fa-cogs"></i> ERP Solutions</a>
         <a href="/assets/Pages/Bookkeeping.html" class="nav-link"><i class="fa fa-balance-scale"></i> Bookkeeping</a>
         <a href="/assets/Pages/clients.html" class="nav-link"><i class="fa fa-users"></i> Clients & Projects</a>
         <a href="/assets/Pages/ContactUs.html" class="nav-link"><i class="fa fa-envelope"></i> Contact Us</a>
       </nav>    
-
     </header>
 
     <div class="container">
 
       <!-- TOOL HERO SECTION -->
-
       <div class="tool-header">
         <h1>🚀 Zynex ERP Tool</h1>
         <p>Complete Desktop Cloud-Based Accounting & ERP Solution</p>
@@ -454,7 +530,6 @@
       </div>
 
       <!-- FEATURES OVERVIEW -->
-
       <div class="feature-grid">
         <div class="feature-card">
           <i class="fa fa-database"></i>
@@ -474,7 +549,6 @@
       </div>
 
       <!-- MODULES SECTION -->
-
       <div class="card">
         <h2 class="text-center">📦 Complete Modules</h2>
         <div class="row-modules">
@@ -544,76 +618,63 @@
       </div>
 
       <!-- DASHBOARD PREVIEW - 2 IMAGES PER ROW -->
-
       <div class="screenshot-section">
         <h2 class="text-center">📸 Dashboard & Key Screens</h2>
         <div class="screenshot-grid">
-
           <div class="screenshot-card">
             <img src="../../assets/images/App/5.JPG" alt="Dashboard" onerror="this.src='https://via.placeholder.com/500x300?text=DashBoard'">
             <h4>📊 Main Dashboard</h4>
             <p>Real-time financial overview - Cash Position, Bank Balance, Customer/Vendor Aging, Monthly Expenses & Revenue.</p>
           </div>
-
           <div class="screenshot-card">
             <img src="../../assets/images/App/1.JPG" alt="Login Screen" onerror="this.src='https://via.placeholder.com/500x300?text=Login'">
             <h4>🔐 User Login</h4>
             <p>Secure authentication with company and user-specific access.</p>
           </div>
-
           <div class="screenshot-card">
             <img src="../../assets/images/App/6.JPG" alt="Quick Access" onerror="this.src='https://via.placeholder.com/500x300?text=Quick+Access'">
             <h4>⚡ Quick Access Menu</h4>
             <p>One-click access to Chart of Accounts, Journal Vouchers, Cash Payments/Receipts.</p>
           </div>
-
           <div class="screenshot-card">
             <img src="../../assets/images/App/8.JPG" alt="General Ledger" onerror="this.src='https://via.placeholder.com/500x300?text=General+Ledger'">
             <h4>📋 General Ledger</h4>
             <p>Complete Chart of Accounts with 4th level detail, search by title or account nature.</p>
           </div>
-
           <div class="screenshot-card">
             <img src="../../assets/images/App/4.JPG" alt="Chart of Account" onerror="this.src='https://via.placeholder.com/500x300?text=Chart+of+Account'">
             <h4>📊 Chart of Account (4th Level)</h4>
             <p>Multi-level Chart of Accounts with transaction-level posting and reporting.</p>
           </div>
-
           <div class="screenshot-card">
             <img src="../../assets/images/App/3.JPG" alt="Accounts Receivable" onerror="this.src='https://via.placeholder.com/500x300?text=AR'">
             <h4>💰 Accounts Receivable</h4>
             <p>Customer aging overview (0-30, 31-60, 61-120, 120+ days), invoicing, receipts.</p>
           </div>
-
           <div class="screenshot-card">
             <img src="../../assets/images/App/2.JPG" alt="Accounts Payable" onerror="this.src='https://via.placeholder.com/500x300?text=AP'">
             <h4>💳 Accounts Payable</h4>
             <p>Vendor management, purchase tracking, payment history, and aging analysis.</p>
           </div>
-
           <div class="screenshot-card">
             <img src="../../assets/images/App/9.JPG" alt="Inventory Module" onerror="this.src='https://via.placeholder.com/500x300?text=Inventory'">
             <h4>📦 Inventory Module</h4>
             <p>Stock position, goods receiving, item categories, and inventory ledger.</p>
           </div>
-
           <div class="screenshot-card">
             <img src="../../assets/images/App/10.JPG" alt="Point of Sales" onerror="this.src='https://via.placeholder.com/500x300?text=POS'">
             <h4>🛒 Point of Sales</h4>
             <p>Complete POS system with invoice printing, stock valuation, and payment modes.</p>
           </div>
-
           <div class="screenshot-card">
             <img src="../../assets/images/App/7.JPG" alt="User Management" onerror="this.src='https://via.placeholder.com/500x300?text=User+Management'">
             <h4>⚙️ User & Fiscal Management</h4>
             <p>Fiscal year setup, user access control, and multi-company management.</p>
           </div>
-
         </div>
       </div>
 
       <!-- TECH STACK - UPDATED -->
-
       <div class="tech-stack">
         <h3>🛠️ Technology Stack</h3>
         <div class="tech-items">
@@ -624,14 +685,44 @@
         </div>
       </div>
 
-      <!-- WHY ZYNEX TOOL -->
+      <!-- ================= OUR TEAM SECTION - FIXED AND PROPERLY ALIGNED ================= -->
+      <div class="card">
+        <div class="card-block">
+          <h2 class="text-center">Zynex ERP Team</h2>
+          <p class="text-center">Meet the leadership behind Zynex Accounting (Pvt) Ltd</p>
+          <br>
+          <div class="team-section">
+            <div class="team-member">
+              <img src="../../assets/images/team/ceo.jpg" class="team-photo" alt="CEO" onerror="this.src='https://placehold.co/200x200/123e52/white?text=CEO'">
+              <h4>Mr. Zahid Mehmood</h4>
+              <p class="team-role">ERP Director</p>
+            </div>
+            <div class="team-member">
+              <img src="../../assets/images/team/finance.jpg" class="team-photo" alt="Finance Director" onerror="this.src='https://placehold.co/200x200/123e52/white?text=Finance'">
+              <h4>Mr. Ahsanullah</h4>
+              <p class="team-role">Senior Director Finance</p>
+            </div>
+            <div class="team-member">
+              <img src="../../assets/images/team/cto2.jpg" class="team-photo" alt="CTO" onerror="this.src='https://placehold.co/200x200/123e52/white?text=CTO'">
+              <h4>Mr. Majid Amin</h4>
+              <p class="team-role">Chief Technology Officer (CTO)</p>
+            </div>
+            <div class="team-member">
+              <img src="../../assets/images/team/erp.jpg" class="team-photo" alt="ERP Director" onerror="this.src='https://placehold.co/200x200/123e52/white?text=ERP'">
+              <h4>Mr. Azher Siddique</h4>
+              <p class="team-role">Director Finance</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <!-- WHY ZYNEX TOOL -->
       <div class="card">
         <h2 class="text-center">✨ Why Zynex ERP Tool?</h2>
         <div class="feature-grid">
           <div class="feature-card">
             <i class="fa fa-user-md"></i>
-            <h3>Built by an Accountant</h3>
+            <h3>Built by Accounts Experts</h3>
             <p>Developed by a professional accountant with 20+ years of US/UAE/PK experience. It understands real business needs.</p>
           </div>
           <div class="feature-card">
@@ -648,10 +739,9 @@
       </div>
 
       <!-- CALL TO ACTION -->
-
       <div class="text-center" style="margin: 50px 0 40px;">
         <h2>Ready to Transform Your Accounting?</h2>
-     <p style="font-size: 1.5rem; margin-bottom: 20px;">Get Zynex ERP Tool for your business today!</p>
+        <p style="font-size: 1.2rem; margin-bottom: 20px;">Get Zynex ERP Tool for your business today!</p>
         <div>
           <a href="ContactUs.html" class="btn-large">
             <i class="fa fa-envelope"></i> Contact for Demo
@@ -667,51 +757,34 @@
   </main>
 
   <!-- FOOTER -->
-
   <footer class="footer-container white-text-container text-center">
-
     <div class="container">
-
       <p>
         <img src="../../assets/images/mashup-icon.svg" alt="">
       </p>
-
       <p>
         <a href="Zynex_Tool.html" style="color:#ffb347;">Zynex ERP Tool</a>
-
         |
-
         © 2019 Zahid Mehmood |
         Professional Accountant & ERP Consultant
       </p>
-    <p style="font-size: 1.3rem; margin-bottom: 5px; color: #fbf9f9;">
+      <p style="font-size: 1rem; margin-bottom: 5px; color: #fbf9f9;">
         ZYNEX ACCOUNTING (PRIVATE) LIMITED
-    </p>
-    <p style="font-size: 1.3rem; color: #fcfcfc; margin-bottom: 5px;">
+      </p>
+      <p style="font-size: 0.9rem; color: #fcfcfc; margin-bottom: 5px;">
         Inc. No. 0312734 | NTN: H892310-5
-    </p>
-   
-  
-  </div>
-
+      </p>
+    </div>
   </footer>
 
   <script>
-
     document.addEventListener("DOMContentLoaded", function () {
-
       if (typeof scrollRevelation !== 'undefined') {
-
         scrollRevelation('.card');
-
       }
-
     });
-
   </script>
-
-  <script type="text/javascript"
-    src="../../main.bc58148c.js"></script>
+  <script type="text/javascript" src="../../main.bc58148c.js"></script>
 
 </body>
 
