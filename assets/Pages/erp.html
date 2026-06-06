@@ -13,6 +13,50 @@
   <link href="../../css2.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+ .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+      border-radius: 16px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 16px;
+    }
+    
+    .video-card {
+      background: #f8f9fa;
+      border-radius: 16px;
+      padding: 25px;
+      margin: 30px 0 40px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    
+    .video-card h3 {
+      color: #123e52;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    
+    @media (min-width: 768px) {
+      .video-card h3 {
+        font-size: 1.8rem;
+      }
+    }
+</style>
 </head>
 
 <body>
@@ -33,6 +77,8 @@
         <a href="/assets/Pages/clients.html" class="nav-link"><i class="fa fa-users"></i> Clients & Projects</a>
         <a href="/assets/Pages/ContactUs.html" class="nav-link"><i class="fa fa-envelope"></i> Contact Us</a>
       </nav>
+
+
     </header>
 
     <!-- ================= ERP CONTENT ================= -->
@@ -60,7 +106,21 @@
           data-driven decision-making.
         </p>
       </div>
-
+      <!-- YOUTUBE VIDEO SECTION - CORRECTED EMBED LINK -->
+      <div class="video-card">
+        <h3>🎥 Watch Zynex ERP Tool in Action</h3>
+        <div class="video-container">
+          <iframe 
+            src="https://www.youtube.com/embed/FY6Dxw8n9Gw" 
+            title="Zynex ERP Tool Demo Video"
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <p style="color: #4a627a; margin-top: 15px;">See how Zynex ERP Tool simplifies accounting, inventory, and financial management for businesses of all sizes.</p>
+      </div>
       <!-- ================= ACCOUNTING SOFTWARE IMPLEMENTATIONS ================= -->
       <div class="card">
         <div class="card-block">
